@@ -25,18 +25,31 @@ classdef ETP < PROBLEM
     end
     methods
         function obj = ETP()
-            obj.Global.D = 800 + 550; % We could use the offset as a variable for experimentation.
             obj.Global.M = 2;
             obj.Global.lower = zeros(1,obj.Global.D); % Lower bounds
             obj.Global.upper = ones(1,obj.Global.D)*obj.Global.D; % Upper bounds
             obj.Global.encoding = 'permutation';
         end
         
-        function PopObj = CalObj(obj, PopDec)            
+        function PopObj = CalObj(obj, PopDec)  
+            glob = obj.Global.parameter.ETP{1,1};
+            courses = glob.courses;
+            map = glob.map;
+            slots = obj.Global.D;
+            iterations = obj.Global.N;
             PopObj = zeros(size(PopDec,1),2);
-            for i = 1:obj.Global.N
-                individual = PopDec(i, :);
-                % Here goes the processing for objectives.
+            parfor(i = 1:iterations, 4)
+                indiv = PopDec(i, :);
+                total_conflicts = conflict_matrix(indiv, courses, map);
+                %PopObj(i, 1) = total_conflicts;
+               % PopObj(i, 2) = 0.04;
+                for j = 0:slots-1
+                    if(indiv(slots-j) <= 800)
+                        break
+                    end
+                end
+                        
+                PopObj(i, :) = [total_conflicts, -1 * j]
             end
 
         end
