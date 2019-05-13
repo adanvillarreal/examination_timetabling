@@ -1,3 +1,13 @@
+%Apegándome al Código de Ética de los Estudiantes del Tecnológico de Monterrey, ´
+%me comprometo a que mi actuación en este examen esté regida por la honestidad
+%académica.
+% Adan Villarreal Chapa
+% A01281312
+% Héctor Miguel Morales González
+% A01193139
+% Jorge Olvera Ramirez
+% A01192923
+
 % returns matrix of 1 or 0 indicating if the student in row i has exam in
 % column j.
 function [student_exams_mat] = format_exm(filename)
