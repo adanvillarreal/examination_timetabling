@@ -8,6 +8,10 @@
 % Jorge Olvera Ramirez
 % A01192923
 function [res] = experiment()
+% Function used for experimentation. Iterates through all small problem
+% files and runs the MOEA with different values for the number of empty
+% slots. Results in a matrix with [conflict density, empty slots, slots,
+% conflicts]
     problem = {};
     solutions = {};
     res = zeros(50, 5);
