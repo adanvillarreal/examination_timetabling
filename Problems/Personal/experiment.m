@@ -1,3 +1,12 @@
+%Apegándome al Código de Ética de los Estudiantes del Tecnológico de Monterrey, ´
+%me comprometo a que mi actuación en este examen esté regida por la honestidad
+%académica.
+% Adan Villarreal Chapa
+% A01281312
+% Héctor Miguel Morales González
+% A01193139
+% Jorge Olvera Ramirez
+% A01192923
 function [res] = experiment()
     problem = {};
     solutions = {};

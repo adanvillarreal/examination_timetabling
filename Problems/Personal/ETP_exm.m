@@ -1,8 +1,12 @@
-%“Apeg´andome al C´odigo de Etica de los Estudiantes del Tecnol´ogico de Monterrey, ´
-%me comprometo a que mi actuaci´on en este examen est´e regida por la honestidad
-%acad´emica.”
+%Apegándome al Código de Ética de los Estudiantes del Tecnológico de Monterrey,
+%me comprometo a que mi actuación en este examen esté regida por la honestidad
+%académica.
 % Adan Villarreal Chapa
 % A01281312
+% Héctor Miguel Morales González
+% A01193139
+% Jorge Olvera Ramirez
+% A01192923
 classdef ETP_exm < PROBLEM
 % <problem> <BT>
 % Individuals are represented as an array with uniqued ID's ranging from
